@@ -1,4 +1,4 @@
 #node and typescript 
 #run 
-node filenamejs 
-ts npx nodemone --ex
+node filename.js
+ #npx nodemone --exec ts-node filename.ts
