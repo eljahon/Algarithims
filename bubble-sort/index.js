@@ -1,4 +1,4 @@
-let array = [5,3,2];
+let array = [5,3,2,4];
 //Average base;
 function bubbleSort(array) {
     let len = array.length;
