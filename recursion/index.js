@@ -39,3 +39,20 @@
 //     console.log(string);
 // }
 // console.log(triangle(10));
+// berilgan soning raqamlar yigindisni chiqaring faqat recursiya bn 
+// function recursSumm(n) {
+//   if (n < 10) return n;
+//   const lastDigit = n % 10;
+//   const remainingNum = Math.floor(n /10 );
+//   return lastDigit+recursSumm(remainingNum)
+  
+// };
+// console.log(recursSumm(3456));
+// function recursSumm(n) {
+//   if (n < 10) return n;
+//   const lastDigit = n % 10;
+//   const remainingNum = Math.floor(n /10 );
+//   return recursSumm(lastDigit+recursSumm(remainingNum))
+  
+// };
+// console.log(recursSumm(3456));
