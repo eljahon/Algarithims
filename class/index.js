@@ -7,3 +7,5 @@ class Abstract {
 };
 const abstract = new Abstract ();
 console.log(abstract);
+class User {};
+
