@@ -1,9 +1,9 @@
 const computer = {
           name: 'MacBook',
           isOn: false,
-          turnOn() {
+          turnOn(arg) {
               this.isOn = true;
-              return `The ${this.name} is On`;
+              return `The ${this.name} is On ${arg}`;
           },
           turnOff() {
               this.isOn = false;
@@ -14,7 +14,7 @@ const computer = {
           name: 'Dell PowerEdge T30',
           isOn: false
       };
-      let result = computer.turnOn.apply(server);
+      let result = computer.turnOn.apply(server, ['hello']);
 
 console.log(result);
 let arr = [1, 2, 3];
