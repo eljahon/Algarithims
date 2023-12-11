@@ -1,7 +1,7 @@
 class myMap {
     constructor() {
         this.size = 0;
-        this.data = {}
+        #data = {}
     }
     set(key, value) {
         this.data[key] = value;

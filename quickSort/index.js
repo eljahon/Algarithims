@@ -10,7 +10,6 @@ function quickSort(array) {
       rigth.push(array[i]);
     }
   }
-  debugger
   return [...quickSort(left), pivot, ...quickSort(rigth)];
 }
 const array = [8, 20, 12, -1, 3, 4, -5];
