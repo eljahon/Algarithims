@@ -1,61 +1,51 @@
 class myMap {
+    #data;
           constructor() {
               this.size = 0;
-              this.data = {}
+              this.#data = {}
           }
           set(key, value) {
-              this.data[key] = value;
+              this.#data[key] = value;
               this.size++;
-              return value;
+              return this;
           }
           get(key) {
-              return this.data[key]
+              return this.#data[key]
       
           }
           has(key) {
-              for (let [ky, value] in this.data) {
-                  if (`${key}` === ky) return true
-              }
-              return false;
+              return `${key}` in this.#data;
       
           }
           delete(key) {
-              delete this.data[key];
+              delete this.#data[key];
               this.size--;
           }
           clear() {
-              this.data = {}
+              this.#data = {}
               this.size = 0;
           }
           keys() {
-              const ky = [];
-              for (let [key, value] in this.data) {
-                  ky.push(key)
-              }
-              return ky
+              return Object.keys(this.#data)
           }
           values() {
-              const value = [];
-              for (let key in this.data) {
-                  value.push(this.data[key])
-              }
-              return value
+              return Object.values(this.#data)
           }
           entries() {
               const data = []
-              for (let i in this.data) {
-                  data.push([i, this.data[i]])
+              for (let item in this.#data) {
+                  data.push([item, this.#data[item]])
               }
               return data;
           }
       
       }
       const map = new myMap();
-      map.set(1, 23);
-      console.log(map.size);
-      console.log(map.get(1));
-      console.log(map.has(1));
-      console.log(map.entries());
-      console.log(map.keys());
-      console.log(map.values());
+      map.set(1, 23).set(2,24).set(3, 25);
+      console.log('size =>', map.size);
+      console.log('get =>', map.get(1));
+      console.log('has =>', map.has(1));
+      console.log('entries =>', map.entries());
+      console.log('keys =>', map.keys());
+      console.log('values =>', map.values());
       

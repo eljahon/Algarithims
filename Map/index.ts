@@ -1,23 +1,25 @@
+
+type itemFild = {
+    [key: string]: string|number|boolean|object
+  };
 class myMap {
+    private data:itemFild;
+    public size:number = 0
     constructor() {
         this.size = 0;
-        #data = {}
+    
     }
-    set(key, value) {
+     set<T>(key:string|number|boolean|object, value:string|number|boolean|object):T {
         this.data[key] = value;
         this.size++;
-        return value;
+        return this;
     }
-    get(key) {
+     get(key) {
         return this.data[key]
 
     }
     has(key) {
-        for (let [ky, value] in this.data) {
-            if (`${key}` === ky) return true
-        }
-        return false;
-
+        return `${key}` in this.data;
     }
     delete(key) {
         delete this.data[key];
